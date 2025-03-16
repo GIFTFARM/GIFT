@@ -1,0 +1,26 @@
+{
+  "bot_token": "7481551558:AAGgUn8g9B36WVy_YqKz1cvx_xpxKyRgZqM",
+  "bot_username": "gifttgfarm_bot",
+  "web_app_url": "https://giftfarm.github.io/GIFT/GIFT",
+  "commands": [
+    {
+      "command": "start",
+      "description": "Запустить бота"
+    },
+    {
+      "command": "app",
+      "description": "Открыть мини-приложение"
+    },
+    {
+      "command": "help",
+      "description": "Получить помощь"
+    }
+  ],
+  "menu_button": {
+    "type": "web_app",
+    "text": "Открыть приложение",
+    "web_app": {
+      "url": "https://giftfarm.github.io/GIFT/GIFT"
+    }
+  }
+} 

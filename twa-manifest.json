@@ -1,0 +1,24 @@
+{
+  "name": "GIFT FARM",
+  "short_name": "GIFT FARM",
+  "description": "Фарминг NFT в Telegram",
+  "start_url": "/GIFT/GIFT",
+  "display": "standalone",
+  "background_color": "#1f2937",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/GIFT/icon-192x192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/GIFT/icon-512x512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "bot_token": "7481551558:AAGgUn8g9B36WVy_YqKz1cvx_xpxKyRgZqM",
+  "bot_name": "gifttgfarm_bot"
+} 

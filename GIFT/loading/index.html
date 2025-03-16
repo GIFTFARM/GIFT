@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>GIFT FARM - Загрузка</title>
+  <link rel="stylesheet" href="https://giftfarm.github.io/GIFT/_next/static/css/714c035037a42c97.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    .loading-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #111827;
+      color: white;
+    }
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: #fff;
+      animation: spin 1s ease-in-out infinite;
+      margin-bottom: 20px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .loading-text {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+  <div class="loading-container">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Загрузка GIFT FARM...</div>
+  </div>
+  <script>
+    // Перенаправляем на welcome страницу через 2 секунды
+    setTimeout(() => {
+      window.location.href = '../welcome/';
+    }, 2000);
+  </script>
+</body>
+</html>
