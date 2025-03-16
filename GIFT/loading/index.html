@@ -41,6 +41,12 @@
     <div class="loading-text">Загрузка GIFT FARM...</div>
   </div>
   <script>
+    // Инициализация Telegram Web App
+    if (window.Telegram && window.Telegram.WebApp) {
+      window.Telegram.WebApp.ready();
+      window.Telegram.WebApp.expand();
+    }
+    
     // Перенаправляем на welcome страницу через 2 секунды
     setTimeout(() => {
       window.location.href = '../welcome/';
