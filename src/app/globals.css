@@ -23,4 +23,106 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  -webkit-tap-highlight-color: transparent; /* Убираем подсветку при тапе на мобильных */
+}
+
+/* Классы для задержки анимации */
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1000ms;
+}
+
+.animation-delay-1500 {
+  animation-delay: 1500ms;
+}
+
+/* Тень для текста на изображениях */
+.text-shadow {
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-lg {
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Стили для градиентного текста */
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Анимация для медленного пинга */
+@keyframes ping-slow {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-ping-slow {
+  animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Анимация для уведомления о офлайн-фарминге */
+@keyframes slide-down {
+  0% {
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-down {
+  animation: slide-down 0.5s ease-out forwards;
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 480px) {
+  /* Уменьшаем размер шрифта для мобильных устройств */
+  html {
+    font-size: 14px;
+  }
+  
+  /* Увеличиваем размер активных элементов для лучшего взаимодействия на мобильных */
+  button, 
+  a, 
+  .clickable {
+    min-height: 44px; /* Минимальная высота для удобного нажатия */
+  }
+  
+  /* Уменьшаем отступы для экономии места */
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  /* Добавляем дополнительный отступ снизу для контента, чтобы не перекрывался нижней навигацией */
+  main {
+    padding-bottom: 5rem;
+  }
+}
+
+/* Стили для безопасной зоны на устройствах с вырезами (notch) */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  .fixed-bottom {
+    padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+  }
 }
